@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Wear - Moda Cristã</title>
+<link rel="stylesheet" href="css/estilo.css">
+<link href="index.html" rel="stylesheet">
+</head>
+<body>
+<audio id="musica" src="music/music.mp3.mp3" autoplay loop></audio>
+<header class="header">
+<div class="logo-container">
+<img src="imagens/logo-faith.jpg.jpg" alt="Faith Logo" class="logo">
+<h1></h1>
+</div>
+<nav>
+<ul>
+<a href="./index.html#inicio">Início</a>
+<a href="./index.html#sobre">Sobre</a>
+<a href="./index.html#loja">Loja</a>
+<a href="./index.html#contato">Contato</a>
+
+</ul>
+</nav>
+</header>
+
+<section id="inicio" class="hero">
+<div class="hero-text">
+<h2>Vista sua fé com estilo ✨</h2>
+<p>Moda cristã para quem carrega a luz por onde vai.</p>
+<button onclick="scrollToSection('loja')">Ver Produtos</button>
+</div>
+</section>
+
+<section id="sobre" class="content-section">
+<h2>Sobre a Faith</h2>
+<p>A Faith nasceu para unir fé e estilo. Nossas camisetas trazem mensagens de esperança e força para uma geração que não tem medo de mostrar sua crença.</p>
+</section>
+
+<section id="loja" class="loja-section">
+<h2>Nossa Coleção</h2>
+<div class="produtos">
+  <div class="produto">
+    <img src="imagens/camisa1.jpg" alt="Christ is the cure" onclick="verProduto('Christ is the cure')">
+    <h3>Jesus Vibes</h3>
+    <p>R$ 79,90</p>
+    <!-- Seleção de tamanho -->
+  <label for="Christ is the cure">Tamanho:</label>
+  <select id="Christ is the cure">
+    <option value="P">P</option>
+    <option value="M">M</option>
+    <option value="G">G</option>
+  </select>
+
+  <!-- Estoque -->
+  <p id="Jesus its my savior">Estoque: 7</p>
+    <button onclick="verProduto('Christ is the cure')">Comprar</button>
+    <button onclick="adicionarAoCarrinho('Christ is the cure', 79.9)">Adicionar ao carrinho</button>
+  </div>
+  <div class="produto">
+    <img src="imagens/Jesus its my savior.jpg" alt="Jesus its my savior" onclick="verProduto('Jesus its my savior')">
+    <h3>Faith Bold</h3>
+    <p>R$ 84,90</p>
+    <!-- Seleção de tamanho -->
+  <label for="tamanho-jesus-vibes">Tamanho:</label>
+  <select id="tamanho-jesus-vibes">
+    <option value="P">P</option>
+    <option value="M">M</option>
+    <option value="G">G</option>
+  </select>
+
+  <!-- Estoque -->
+  <p id="estoque-jesus-vibes">Estoque: 7</p>
+    <button onclick="verProduto('Jesus its my savior')">Comprar</button>
+    <button onclick="adicionarAoCarrinho('Jesus its my savior', 84.9)">Adicionar ao carrinho</button>
+  </div>
+  <div class="produto">
+    <img src="imagens/Jesus my King.jpg" alt="Jesus my King" onclick="verProduto('Jesus my King')">
+    <h3>Hope Edition</h3>
+    <p>R$ 89,90</p>
+    <!-- Seleção de tamanho -->
+  <label for="tamanho-Jesus my King">Tamanho:</label>
+  <select id="tamanho-Jesus my King">
+    <option value="P">P</option>
+    <option value="M">M</option>
+    <option value="G">G</option>
+  </select>
+
+  <!-- Estoque -->
+  <p id="estoque-Jesus my King">Estoque: 7</p>
+    <button onclick="verProduto('Jesus my King')">Comprar</button>
+    <button onclick="adicionarAoCarrinho('Jesus my King', 89.9)">Adicionar ao carrinho</button>
+  </div>
+  <div class="produto">
+    <img src="imagens/love like Jesus.jpg" alt="love like Jesus" onclick="verProduto('love like Jesus')">
+    <h3>Light of the World</h3>
+    <p>R$ 94,90</p>
+    <!-- Seleção de tamanho -->
+  <label for="tamanho-love like Jesus">Tamanho:</label>
+  <select id="tamanho-love like Jesus">
+    <option value="P">P</option>
+    <option value="M">M</option>
+    <option value="G">G</option>
+  </select>
+
+  <!-- Estoque -->
+  <p id="estoque-love like Jesus">Estoque: 7</p>
+    <button onclick="verProduto('love like Jesus')">Comprar</button>
+    <button onclick="adicionarAoCarrinho('love like Jesus', 94.9)">Adicionar ao carrinho</button>
+  </div>
+</div>
+</section>
+
+<section id="contato" class="content-section">
+<h2>Contato</h2>
+<p>Envie uma mensagem — respondemos direto no WhatsApp 📲</p>
+<form id="form-contato">
+<input type="text" id="nome" placeholder="Seu nome" required>
+<input type="email" id="email" placeholder="Seu e-mail" required>
+<textarea id="mensagem" placeholder="Sua mensagem..." required></textarea>
+<button type="submit">Enviar pelo WhatsApp</button>
+</form>
+</section>
+<button class="botao-carrinho" onclick="abrirCarrinho()">🛒</button>
+
+
+
+<footer>
+<p>© 2025 Faith. Vista sua fé. Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">

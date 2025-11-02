@@ -1,0 +1,133 @@
+/* RESET */
+* {margin:0;padding:0;box-sizing:border-box;}
+body {font-family: 'Poppins', sans-serif; background:#000; color:#fff; overflow-x:hidden;}
+
+/* HEADER */
+.header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 50px; position:fixed; width:100%; top:0; 
+  background:rgba(0,0,0,0.85); z-index:10; border-bottom:1px solid #ffd70030;
+  backdrop-filter:blur(10px);
+}
+.logo-container {display:flex; align-items:center; gap:10px;}
+.logo {width:60px; border-radius:10px;}
+.header h1 {color:#ffd700;font-size:1.5rem;}
+nav ul {list-style:none; display:flex; gap:25px;}
+nav a {color:#fff; text-decoration:none;font-weight:500; transition:0.3s;}
+nav a:hover{color:#ffd700;}
+
+/* HERO */
+.hero {
+  height:100vh; background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../imagens/logo-faith.jpg') center/cover no-repeat;
+  display:flex; align-items:center; justify-content:center; text-align:center; padding-top:60px;
+}
+.hero-text {background-color: rgba(0,0,0,0.6); padding:40px; border-radius:10px; animation:fadeIn 2s ease;}
+.hero h2{font-size:2.5rem;color:#ffd700;margin-bottom:15px;}
+.hero p{font-size:1.2rem;margin-bottom:20px;}
+.hero button{background-color:#ffd700;color:#000;padding:12px 25px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;transition:0.3s;}
+.hero button:hover{background-color:#fff;}
+
+/* CONTENT SECTIONS */
+.content-section {padding:100px 20px; text-align:center; background-color:#111;}
+.content-section:nth-child(even){background-color:#1a1a1a;}
+.content-section h2{color:#ffd700;font-size:2rem;margin-bottom:20px;}
+
+/* LOJA */
+.loja-section{background-color:#111;text-align:center;padding:100px 20px;}
+.loja-section h2{color:#ffd700;margin-bottom:40px;}
+.produtos{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;}
+.produto {
+  background-color:#1c1c1c;border-radius:10px; overflow:hidden; box-shadow:0 0 10px #000; transition:transform 0.3s, box-shadow 0.3s;
+}
+.produto:hover{transform:translateY(-5px); box-shadow:0 0 15px #ffd70070;}
+.produto img{width:100%; height:300px; object-fit:cover; cursor:pointer;}
+.produto h3{margin:15px 0 5px;}
+.produto p{color:#ffd700;font-weight:bold;}
+.produto button {
+  background: linear-gradient(90deg, #ffd700, #ffcc00);
+  color: #000; font-weight:700; padding:12px 25px; border-radius:12px; border:2px solid #ffd700; box-shadow:0 4px 10px rgba(255,215,0,0.5); transition:all 0.3s ease;
+}
+.produto button:hover {background: linear-gradient(90deg, #fff700, #ffd700); transform: translateY(-3px); box-shadow:0 6px 15px rgba(255,215,0,0.7); cursor:pointer;}
+
+/* SELEÇÃO DE TAMANHO */
+.produto label, .tamanho-label {display:block; margin-top:10px; font-weight:bold; color:#ffd700;}
+.produto select, .tamanho-select {
+  width:100%; padding:8px; margin:5px 0 10px 0; border-radius:6px; border:1px solid #ffd700; background:#1c1c1c; color:#fff; font-weight:bold; cursor:pointer; transition:0.3s;
+}
+.produto select:hover, .tamanho-select:hover{background:#272727;}
+.produto select:focus, .tamanho-select:focus{outline:none; border-color:#fff; box-shadow:0 0 5px #ffd700;}
+
+/* ESTOQUE */
+.produto p[id^="estoque-"] {font-size:0.9rem; color:#ffd700cc; margin-bottom:10px;}
+
+/* FORMULÁRIO */
+form{display:flex; flex-direction:column; align-items:center; gap:10px; max-width:400px; margin:auto;}
+form input, form textarea{width:100%; padding:10px; border-radius:5px; border:none;}
+form button{background-color:#ffd700;border:none;padding:10px 25px;color:#000;font-weight:bold;border-radius:5px; cursor:pointer;}
+form button:hover{background-color:#fff;}
+
+/* PRODUTO DETALHE */
+.produto-detalhe{padding:120px 20px;text-align:center;}
+.produto-detalhe img{width:400px; max-width:90%; border-radius:10px; margin-bottom:20px; cursor:zoom-in; transition:transform 0.3s ease;}
+.produto-detalhe img.zoom{transform:scale(2); cursor:zoom-out;}
+
+/* CARRINHO */
+#carrinho {padding:120px 20px; text-align:center;}
+#carrinho-itens {margin:20px auto; max-width:500px;}
+.item-carrinho {display:flex; justify-content:space-between; align-items:center; background:#1c1c1c; padding:15px; margin:10px 0; border-radius:10px; box-shadow:0 0 10px #000;}
+.item-carrinho button {background:#ffd700; border:none; padding:8px 15px; border-radius:5px; cursor:pointer; font-weight:bold;}
+.item-carrinho button:hover {background:#fff;}
+.botoes-carrinho {margin-top:20px; display:flex; gap:15px; justify-content:center;}
+.botoes-carrinho button {background:#ffd700; border:none; padding:12px 25px; border-radius:5px; cursor:pointer; font-weight:bold; transition:0.3s;}
+.botoes-carrinho button:hover {background:#fff; color:#000;}
+.total-carrinho {margin-top:20px; font-size:1.2rem; font-weight:bold;}
+
+/* BOTÕES FIXOS */
+.botao-carrinho{position:fixed; bottom:20px; right:20px; background:#ffd700; color:#000; padding:15px; border:none; border-radius:50%; font-size:1.5rem; cursor:pointer; z-index:100;}
+.botao-carrinho:hover{background:#fff;}
+
+/* MENSAGEM PRODUTO ADICIONADO */
+#mensagem-carrinho {position: fixed; top: 20px; right: 20px; background: linear-gradient(90deg, #ffd700, #ffcc00); color:#000; font-weight:700; padding:15px 25px; border-radius:12px; box-shadow:0 4px 15px rgba(255,215,0,0.7); z-index:999; opacity:0; transform:translateY(-20px); transition:all 0.4s ease;}
+#mensagem-carrinho.show {opacity:1; transform:translateY(0);}
+
+/* BOTÕES CHECKOUT */
+#btn-checkout, #finalizarCompra {background-color:#ffd700; color:#000; padding:15px 30px; border:none; border-radius:10px; font-weight:bold; cursor:pointer; font-size:1rem; transition:all 0.3s ease; box-shadow:0 4px 10px rgba(255,215,0,0.5);}
+#btn-checkout:hover, #finalizarCompra:hover{background:#fff; color:#000; transform:scale(1.05); box-shadow:0 6px 15px rgba(255,215,0,0.7);}
+#btn-carrinho {background-color:#ffd700; color:#000; padding:12px 25px; font-weight:bold; border:none; border-radius:8px; cursor:pointer; font-size:1rem; transition:all 0.3s ease; box-shadow:0 4px 6px rgba(0,0,0,0.3);}
+#btn-carrinho:hover{background:#fff; color:#000; transform:translateY(-2px); box-shadow:0 6px 10px rgba(0,0,0,0.4);}
+#btn-carrinho:active{transform:translateY(0); box-shadow:0 4px 6px rgba(0,0,0,0.3);}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;background-color:#000;border-top:1px solid #333;}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* RESPONSIVO */
+@media(max-width:600px){
+  .header {flex-direction:column; align-items:flex-start;}
+  .hero h2{font-size:2rem;}
+  .tamanho-select{width:100%;}
+}
+
+.voltar-loja {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ffd700, #ffcc00);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.voltar-loja:hover {
+  background: linear-gradient(90deg, #fff700, #ffd700);
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.7);
+}
+/* FIM DO CSS */
